@@ -1,0 +1,55 @@
+cabal-version: 3.0
+name:          atcoder
+version:       0.1.0.0
+synopsis:      AtCoder solutions in Haskell
+
+common defaults
+  default-language: GHC2021
+  ghc-options:     -O2 -Wall
+  build-depends:
+    base >=4.19 && <5,
+    bytestring,
+    containers,
+    vector,
+    array,
+    mtl,
+    transformers,
+    unordered-containers,
+    hashable,
+    primitive,
+    deepseq
+
+library
+  import:         defaults
+  hs-source-dirs: lib
+  exposed-modules: ACLib
+
+executable abc360-a
+  import:         defaults
+  hs-source-dirs: abc/abc360
+  main-is:        A.hs
+  build-depends:  atcoder
+
+executable abc467-a
+  import:         defaults
+  hs-source-dirs: abc/abc467
+  main-is:        A.hs
+  build-depends:  atcoder
+
+executable abc467-b
+  import:         defaults
+  hs-source-dirs: abc/abc467
+  main-is:        B.hs
+  build-depends:  atcoder
+
+executable abc467-c
+  import:         defaults
+  hs-source-dirs: abc/abc467
+  main-is:        C.hs
+  build-depends:  atcoder
+
+executable abc467-d
+  import:         defaults
+  hs-source-dirs: abc/abc467
+  main-is:        D.hs
+  build-depends:  atcoder
